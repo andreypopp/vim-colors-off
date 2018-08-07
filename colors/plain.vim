@@ -192,7 +192,7 @@ hi link helpHyperTextJump  String
 
 """ StatusLine
 
-call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:status_line})
+call s:h("StatusLine",        {"gui": "underline,bold", "bg": s:bg, "fg": s:status_line})
 call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:status_line_nc})
 
 " Those are not standard but are useful to emphasis different parts of the
@@ -205,9 +205,9 @@ call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:bg_subtle, "gui": "bold"})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
-call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
+call s:h("TabLine",       {"fg": s:norm, "bg": s:bg})
+call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg, "gui": "bold", "cterm": "bold"})
+call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:cursor_line})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
@@ -255,5 +255,9 @@ hi link markdownH5 Statement
 hi link markdownH6 Statement
 hi link markdownListMarker Constant
 hi link markdownCode Constant
+hi link markdownCodeBlock Constant
 hi link markdownCodeDelimiter Constant
 hi link markdownHeadingDelimiter Constant
+
+hi link yamlBlockMappingKey Statement
+hi link pythonOperator Statement
