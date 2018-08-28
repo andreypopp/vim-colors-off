@@ -99,12 +99,12 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
-call s:h("Normal",        {"fg": s:norm})
-call s:h("Noise",         {"fg": s:norm_subtle})
+call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Noise",         {"bg": s:bg, "fg": s:norm_subtle})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm})
 call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
 
-call s:h("Constant",      {"fg": s:constant})
+call s:h("Constant",      {"bg": s:bg, "fg": s:constant})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -116,7 +116,7 @@ hi! link Identifier       Normal
 hi! link Function         Identifier
 
 "hi! link Statement        Normal
-call s:h("Statement",     {"fg": s:norm, "gui": "bold"})
+call s:h("Statement",     {"bg": s:bg, "fg": s:norm, "gui": "bold"})
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
