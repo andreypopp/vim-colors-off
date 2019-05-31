@@ -142,13 +142,10 @@ call s:h("ExtraWhitespace",  {"bg": s:error})
 call s:h("ErrorMsg",      {"fg": s:error})
 hi! link Error            ErrorMsg
 hi! link Question         ErrorMsg
-
 " __WarningMsg__
 call s:h("WarningMsg",    {"fg": s:warning})
-
 " __InfoMsg__
 call s:h("InfoMsg",       {"fg": s:dark_magenta, "cterm": "bold"})
-
 " __MoreMsg__
 call s:h("MoreMsg",       {"fg": s:norm_subtle, "cterm": "bold"})
 hi! link ModeMsg MoreMsg
