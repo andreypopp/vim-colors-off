@@ -130,7 +130,6 @@ else
 endif
 hi! link Identifier       Normal
 hi! link Function         Identifier
-hi! link Include          Statement
 hi! link Type             Normal
 hi! link StorageClass     Type
 hi! link Structure        Type
@@ -170,6 +169,7 @@ hi! link Title            Constant
 
 " __Statement__
 call s:h("Statement",     {"fg": s:norm, "gui": "bold"})
+hi! link Include          Statement
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
