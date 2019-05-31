@@ -122,11 +122,11 @@ endfunction
 
 " __Normal__
 if has("gui")
-    call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
-    call s:h("Cursor",        {"fg": s:bg, "bg": s:norm})
+    call s:h("Normal",    {"fg": s:norm, "bg": s:bg})
+    call s:h("Cursor",    {"fg": s:bg, "bg": s:norm})
 else
-    call s:h("Normal",        {"fg": s:norm})
-    hi! link Cursor           Identifier
+    call s:h("Normal",    {"fg": s:norm})
+    hi! link Cursor       Identifier
 endif
 hi! link Identifier       Normal
 hi! link Function         Identifier
@@ -147,12 +147,12 @@ hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
 " __Operator__
-call s:h("Noise",     {"fg": s:norm_subtle, "gui": "NONE"})
-hi! link Operator     Noise
-hi! link LineNr       Noise
-hi! link CursorLineNr LineNr
-hi! link FoldColumn   LineNr
-hi! link SignColumn   LineNr
+call s:h("Noise",         {"fg": s:norm_subtle, "gui": "NONE"})
+hi! link Operator         Noise
+hi! link LineNr           Noise
+hi! link CursorLineNr     LineNr
+hi! link FoldColumn       LineNr
+hi! link SignColumn       LineNr
 
 " __Comment__
 call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
@@ -178,18 +178,18 @@ hi! link Exception        Statement
 
 " __ErrorMsg__
 call s:h("ErrorMsg",      {"fg": s:error})
-hi! link Error    ErrorMsg
-hi! link Question ErrorMsg
+hi! link Error            ErrorMsg
+hi! link Question         ErrorMsg
 " __WarningMsg__
 call s:h("WarningMsg",    {"fg": s:warning})
 " __MoreMsg__
 call s:h("MoreMsg",       {"fg": s:norm_subtle, "cterm": "bold", "gui": "bold"})
-hi! link ModeMsg MoreMsg
+hi! link ModeMsg          MoreMsg
 
 " __NonText__
 call s:h("NonText",       {"fg": s:norm_very_subtle})
-hi! link Folded   NonText
-hi! link qfLineNr NonText
+hi! link Folded           NonText
+hi! link qfLineNr         NonText
 
 " __Search__
 call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
@@ -239,14 +239,14 @@ call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:warning})
 
 " __Pmenu__
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
-hi! link PmenuSbar   Pmenu
-hi! link PmenuThumb  Pmenu
+hi! link PmenuSbar        Pmenu
+hi! link PmenuThumb       Pmenu
 " __PmenuSel__
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:cursor_line, "gui": "bold"})
 
-hi! link TabLine            Normal
-hi! link TabLineSel         Keyword
-hi! link TabLineFill        Normal
+hi! link TabLine          Normal
+hi! link TabLineSel       Keyword
+hi! link TabLineFill      Normal
 
 " __CursorLine__
 call s:h("CursorLine",    {"bg": s:cursor_line})
